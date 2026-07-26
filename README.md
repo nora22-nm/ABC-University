@@ -64,4 +64,4 @@ ABC University is a web-based University Management System developed using ASP.N
 
 ## Author
 
-Noura Al-Subai
+Norah Al-Subai
