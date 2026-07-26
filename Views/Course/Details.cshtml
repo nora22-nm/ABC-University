@@ -1,0 +1,9 @@
+﻿@model ABC_University.Models.Course
+
+<label for="courseName"> Course Name:</label>
+<input type="text" value="@Model.courseName" name="courseName" disabled />
+
+<label for="isAvailable">Is Available:</label>
+<input type="text" value="@(Model.isAvailable ? "Yes" : "No")" name="isAvailable" disabled />
+
+

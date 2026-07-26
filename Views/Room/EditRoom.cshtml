@@ -1,0 +1,37 @@
+﻿
+@model ABC_University.Models.Room
+
+@{
+    ViewBag.Title = "Edit Room";
+}
+
+<h2>Edit Room</h2>
+
+@using (Html.BeginForm("EditRoom", "Room", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.roomID)
+
+    <div>
+        <label>Room Name</label>
+        @Html.TextBoxFor(model => model.roomName, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label>Room Size</label>
+        @Html.TextBoxFor(model => model.roomSize, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label>Is Available</label>
+        @Html.CheckBoxFor(model => model.isAvailable)
+    </div>
+
+    <div>
+        <label>Location</label>
+        @Html.TextBoxFor(model => model.location, new { @class = "form-control" })
+    </div>
+
+    <br />
+    <input type="submit" value="Save" class="button" />
+}
+

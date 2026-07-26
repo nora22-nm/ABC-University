@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+<link href="~/Content/MyDesign/MainDesign.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="container">
+        <ul id="menu">
+            <li>
+                <a href="/Home/Index">ABC University - Home Page</a>
+
+            </li>
+            <li>
+                <a href="/Teacher/Index">Teachers</a>
+                <ul>
+                    <li><a href="/Teacher/InsertTeacher">Add new teacher</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="/Student/Index">Students</a>
+                <ul>
+                    <li><a href="/Student/InsertStudent">Add new student</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="/Room/Index">Rooms</a>
+                <ul>
+                    <li><a href="/Room/InsertRoom">Add new room</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="/Course/Index">Courses</a>
+                <ul>
+                    <li><a href="/Course/InsertCourse">Insert new course</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - ABC University</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

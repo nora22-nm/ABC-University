@@ -1,0 +1,23 @@
+﻿
+@using (Html.BeginForm("InsertRoom", "Room", FormMethod.Post))
+{
+    <label for="roomName">Room Name</label>
+    <input type="text" name="roomName" required />
+
+    <label for="roomSize">Room Size</label>
+    <input type="text" name="roomSize" required />
+
+    <label for="isAvailable">Is Available</label>
+    <select name="isAvailable">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+
+<div/>
+    <label for="location">Location</label>
+    <input type="text" name="location" required />
+
+    <input type="submit" value="Add Room" class="button" />
+  
+}
+

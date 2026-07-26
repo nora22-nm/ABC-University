@@ -1,0 +1,26 @@
+﻿
+@model ABC_University.Models.Teacher
+
+@{
+    ViewBag.Title = "Edit Teacher";
+}
+
+<h2>Edit Teacher</h2>
+
+@using (Html.BeginForm("EditTeacher", "Teacher", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.teacherID)
+
+    <div>
+        <label>Teacher Name</label>
+        @Html.TextBoxFor(model => model.teacherName)
+    </div>
+
+    <div>
+        <label>Teacher Number</label>
+        @Html.TextBoxFor(model => model.teacherNo)
+    </div>
+
+    <input type="submit" value="Save" class="button" />
+   
+}

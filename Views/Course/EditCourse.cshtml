@@ -1,0 +1,26 @@
+﻿
+@model ABC_University.Models.Course
+
+@{
+    ViewBag.Title = "Edit Course";
+}
+
+<h2>Edit Course</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.courseID)
+
+    <div>
+        @Html.LabelFor(model => model.courseName)
+        @Html.TextBoxFor(model => model.courseName)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.isAvailable)
+        @Html.CheckBoxFor(model => model.isAvailable)
+    </div>
+
+    <input type="submit" value="Save" class="button" />
+}
+

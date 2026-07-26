@@ -1,0 +1,14 @@
+﻿@model ABC_University.Models.Room
+
+<label for="roomName">Room Name:</label>
+<input type="text" value="@Model.roomName" name="roomName" disabled />
+
+<label for="roomSize">Room Size:</label>
+<input type="text" value="@Model.roomSize" name="roomSize" disabled />
+
+<label for="isAvailable">Is Available:</label>
+<input type="text" value="@(Model.isAvailable ? "Yes" : "No")" name="isAvailable" disabled />
+
+<label for="location">Location:</label>
+<input type="text" value="@Model.location" name="location" disabled />
+

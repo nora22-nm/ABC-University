@@ -1,0 +1,27 @@
+﻿
+@model ABC_University.Models.Student
+
+@{
+    ViewBag.Title = "Edit Student";
+}
+
+<h2>Edit Student</h2>
+
+@using (Html.BeginForm("EditStudent", "Student", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.studentID)
+
+    <div>
+        <label>Student Name</label>
+        @Html.TextBoxFor(model => model.studentName)
+    </div>
+
+    <div>
+        <label>Student Number</label>
+        @Html.TextBoxFor(model => model.studentNo)
+    </div>
+
+    <input type="submit" value="Save" class="button" />
+
+}
+
